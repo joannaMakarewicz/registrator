@@ -4,7 +4,6 @@ const Header = () => {
   return (
     <header>
       <h1>Welcome in React World</h1>
-      <p>Add new user</p>
     </header>
   );
 };
