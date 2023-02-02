@@ -1,0 +1,30 @@
+.user {
+  background-color: #ecf8f8;
+}
+
+.user__user {
+  list-style: none;
+  margin: 5px auto;
+  padding: 16px;
+  width: 60vw;
+}
+
+.user__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.user__data {
+  display: grid;
+  font-weight: bold;
+  column-gap: 6px;
+  grid-template-columns: 1fr 1fr;
+  margin: 6px;
+}
+
+.user__realData {
+  font-weight: 400;
+  padding-left: 16px;
+}

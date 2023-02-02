@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TextInput from "./TextInput";
+import "./Form.css";
 
 const Form = () => {
   const defaultData = {
@@ -23,7 +24,7 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={afterFormClick}>
+    <form className="form" onSubmit={afterFormClick}>
       <label>
         Name:
         <TextInput
