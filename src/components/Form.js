@@ -1,13 +1,30 @@
 import React, { useState } from "react";
 
+
 const Form = () => {
-  const [name, setName] = useState('');
-  const [surname, setSurname] = useState('');
-  const [age, setAge] = useState(0);
+  const defaultData = {
+    name: '',
+    surname: '',
+    age:'0'
+  }
+  const [formData, setFormData] = useState(defaultData);
+
+
+
+  const handleChange = (e) => setFormData(prevState => ({
+    ...prevState,
+  [e.target.id]:e.target.value,
+  }));
+
+  const afterFormClick = (e) => {
+    e.preventDefault();
+    console.log(formData);
+    setFormData(defaultData);
+  }
 
 
   return (
-    <div>
+    <form onSubmit={afterFormClick}>
       <label>
         Name:
         <input
@@ -15,25 +32,17 @@ const Form = () => {
           type="text"
           name="name"
           placeholder="Add name"
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
+          onChange={handleChange}
         />
       </label>
       <label>
-        Surname: <input type="text" name="surname" placeholder="Add surname"           onChange={(e) => {
-            setSurname(e.target.value);
-          }}/>
+        Surname: <input type="text" name="surname" placeholder="Add surname"  onChange={handleChange}/>
       </label>
       <label>
-        Age: <input type="number" name="age" placeholder="Add age"           onChange={(e) => {
-            setAge(e.target.value);
-          }} />
+        Age: <input type="number" name="age" placeholder="Add age"  onChange={handleChange}       />
       </label>
-      <p>Name: {name}</p>
-      <p>Surname: {surname} </p>
-      <p>Age: {age} </p>
-    </div>
+      <button type='submit'>Add user</button>
+    </form>
   );
 };
 

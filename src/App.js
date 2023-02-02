@@ -1,5 +1,4 @@
 import "./App.css";
-import Button from "./components/Button";
 import Form from "./components/Form";
 import Header from "./components/Header";
 import User from "./components/User";
@@ -32,7 +31,6 @@ function App() {
     <div>
       <Header />
       <Form/>
-      <Button/>
       <User
        users={users}
       />
