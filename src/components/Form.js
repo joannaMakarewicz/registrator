@@ -1,33 +1,32 @@
 import React, { useState } from "react";
-
+import TextInput from "./TextInput";
 
 const Form = () => {
   const defaultData = {
-    name: '',
-    surname: '',
-    age:'0'
-  }
+    name: "",
+    surname: "",
+    age: "0",
+  };
   const [formData, setFormData] = useState(defaultData);
+  const [login, setLogin] = useState(false);
 
-
-
-  const handleChange = (e) => setFormData(prevState => ({
-    ...prevState,
-  [e.target.id]:e.target.value,
-  }));
+  const handleChange = (e) =>
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.id]: e.target.value,
+    }));
 
   const afterFormClick = (e) => {
     e.preventDefault();
     console.log(formData);
     setFormData(defaultData);
-  }
-
+  };
 
   return (
     <form onSubmit={afterFormClick}>
       <label>
         Name:
-        <input
+        <TextInput
           id="name"
           type="text"
           name="name"
@@ -36,12 +35,28 @@ const Form = () => {
         />
       </label>
       <label>
-        Surname: <input type="text" name="surname" placeholder="Add surname"  onChange={handleChange}/>
+        Surname:
+        <TextInput
+          type="text"
+          name="surname"
+          placeholder="Add surname"
+          onChange={handleChange}
+        />
       </label>
       <label>
-        Age: <input type="number" name="age" placeholder="Add age"  onChange={handleChange}       />
+        Age:{" "}
+        <TextInput
+          type="number"
+          name="age"
+          placeholder="Add age"
+          onChange={handleChange}
+        />
       </label>
-      <button type='submit'>Add user</button>
+      {login ? <p>Użytkownik zalogowany</p> : <p>Użytkownik niezalogowany</p>}
+
+      <button type="submit" onClick={() => setLogin(!login)}>
+        Add user
+      </button>
     </form>
   );
 };

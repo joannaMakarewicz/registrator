@@ -1,9 +1,12 @@
 import React from "react";
+import ImageAvatars from "./ImageAvatars";
+
 
 const User = ({ users }) => {
   return (
     <div>
       <hr></hr>
+      <ImageAvatars/>
       <h2>Our users</h2>
       {users.map((user, index) => {
         return (
