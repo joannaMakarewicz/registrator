@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Box from "@mui/material/Box";
 import TextInput from "./TextInput";
 import "./Form.css";
 
@@ -24,7 +25,16 @@ const Form = () => {
   };
 
   return (
-    <form className="form" onSubmit={afterFormClick}>
+    <Box
+      component="form"
+      sx={{
+        "& > :not(style)": { m: 1, width: "25ch" },
+      }}
+      noValidate
+      autoComplete="off"
+      className="form"
+      onSubmit={afterFormClick}
+    >
       <label>
         Name:
         <TextInput
@@ -58,7 +68,7 @@ const Form = () => {
       <button type="submit" onClick={() => setLogin(!login)}>
         Add user
       </button>
-    </form>
+    </Box>
   );
 };
 

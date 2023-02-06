@@ -1,39 +1,16 @@
 import "./App.css";
-import Form from "./components/Form";
-import Header from "./components/Header";
-import User from "./components/User";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
-  const users = [
-    {
-      username: "Julia",
-      surname: "Roberts",
-      age: 55,
-    },
-    {
-      username: "Leonardo",
-      surname: "DiCaprio",
-      age: 48,
-    },
-    {
-      username: "Ben",
-      surname: "Affleck",
-      age: 50,
-    },
-    {
-      username: "Hugh",
-      surname: "Grant",
-      age: 62,
-    }
-  ];
-
   return (
     <div>
-      <Header />
-      <Form/>
-      <User
-       users={users}
-      />
+      
+      <Router>
+        <Routes>
+          <Route path='/registrator' element={<Home/>}/>
+        </Routes>
+      </Router>
     </div>
   );
 }
