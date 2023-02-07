@@ -8,6 +8,7 @@ import Contact from "../components/Contact";
 const Home = () => {
   const api = 'https://jsonplaceholder.typicode.com/users';
   const [users, setUsers]=useState([]);
+  const[newUser, setNewUser]=useState('');
 
   useEffect(() => {
     const getUser = async () => {
@@ -17,11 +18,17 @@ const Home = () => {
     getUser();
   }, []);
 
+  const addUser = async() => {
+    const user = {name:newUser, body: 'New'};
+    await axios.post(api, user);
+    setUsers([user, ...users])
+  }
+
   return (
     <div>
       <Header />
       <Contact/>
-      <Form/>
+      <Form setNewUser={setNewUser} addUser={addUser}/>
       <User users={users} />
     </div>
   );

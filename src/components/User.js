@@ -13,7 +13,7 @@ const User = ({ users }) => {
             <ul className="user__user" key={index}>
               <li className="user__data">
                 Username:{" "}
-                <span className="user__realData">{user.username} </span>
+                <span className="user__realData">{user.name} </span>
               </li>
               <li className="user__data">
                 E-mail: <span className="user__realData">{user.email}</span>

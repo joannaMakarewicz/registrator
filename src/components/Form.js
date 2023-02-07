@@ -3,17 +3,16 @@ import Box from "@mui/material/Box";
 import TextInput from "./TextInput";
 import "./Form.css";
 
-const Form = () => {
+const Form = (setNewUser, addUser) => {
 
   const defaultData = {
-    name: "",
-    surname: "",
-    age: "0",
+    name: '',
+    email: '',
+    company: '',
   };
 
   const [formData, setFormData] = useState(defaultData);
 
-  const [login, setLogin] = useState(false);
 
   const handleChange = (e) =>
     setFormData((prevState) => ({
@@ -24,7 +23,7 @@ const Form = () => {
   const afterFormClick = (e) => {
     e.preventDefault();
     console.log(formData);
-    setFormData(defaultData);
+    // setFormData(defaultData);
   };
 
   return (
@@ -48,7 +47,7 @@ const Form = () => {
           type="text"
           name="name"
           placeholder="Add name"
-          onChange={handleChange}
+          onChange={(e) => setNewUser(e.target.value)}
         />
       </label>
 
@@ -72,9 +71,7 @@ const Form = () => {
         />
       </label>
 
-      {login ? <p>Użytkownik zalogowany</p> : <p>Użytkownik niezalogowany</p>}
-
-      <button type="submit" onClick={() => setLogin(!login)}>
+      <button type="submit" onClick={() => addUser}>
         Add user
       </button>
 
