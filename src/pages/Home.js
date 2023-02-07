@@ -2,6 +2,7 @@ import React from "react";
 import Form from '../components/Form';
 import Header from "../components/Header";
 import User from "../components/User";
+import Contact from "../components/Contact";
 
 const Home = () => {
   const users = [
@@ -29,6 +30,7 @@ const Home = () => {
   return (
     <div>
       <Header />
+      <Contact/>
       <Form />
       <User users={users} />
     </div>

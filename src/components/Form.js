@@ -4,12 +4,15 @@ import TextInput from "./TextInput";
 import "./Form.css";
 
 const Form = () => {
+
   const defaultData = {
     name: "",
     surname: "",
     age: "0",
   };
+
   const [formData, setFormData] = useState(defaultData);
+
   const [login, setLogin] = useState(false);
 
   const handleChange = (e) =>
@@ -25,6 +28,7 @@ const Form = () => {
   };
 
   return (
+
     <Box
       component="form"
       sx={{
@@ -35,6 +39,8 @@ const Form = () => {
       className="form"
       onSubmit={afterFormClick}
     >
+      <p className="header__content">Add new user to our course.</p>
+
       <label>
         Name:
         <TextInput
@@ -45,6 +51,7 @@ const Form = () => {
           onChange={handleChange}
         />
       </label>
+
       <label>
         Surname:
         <TextInput
@@ -54,8 +61,9 @@ const Form = () => {
           onChange={handleChange}
         />
       </label>
+
       <label>
-        Age:{" "}
+        Age:
         <TextInput
           type="number"
           name="age"
@@ -63,11 +71,13 @@ const Form = () => {
           onChange={handleChange}
         />
       </label>
+
       {login ? <p>Użytkownik zalogowany</p> : <p>Użytkownik niezalogowany</p>}
 
       <button type="submit" onClick={() => setLogin(!login)}>
         Add user
       </button>
+
     </Box>
   );
 };

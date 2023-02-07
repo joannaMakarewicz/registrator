@@ -1,0 +1,10 @@
+.contact {
+    position: absolute;
+    right: 16px;
+    top:16px;
+}
+
+.contact__icon {
+    color:#353535;
+    font-size: large;
+}

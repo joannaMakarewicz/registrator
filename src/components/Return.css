@@ -1,0 +1,10 @@
+.return {
+    position: absolute;
+    right: 16px;
+    top:16px;
+}
+
+.return__icon {
+    color:#353535;
+    font-size: large;
+}
