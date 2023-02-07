@@ -53,21 +53,21 @@ const Form = () => {
       </label>
 
       <label>
-        Surname:
+        E-mail:
         <TextInput
-          type="text"
-          name="surname"
-          placeholder="Add surname"
+          type="email"
+          name="email"
+          placeholder="Add email"
           onChange={handleChange}
         />
       </label>
 
       <label>
-        Age:
+        Company:
         <TextInput
-          type="number"
-          name="age"
-          placeholder="Add age"
+          type="text"
+          name="company"
+          placeholder="Add company"
           onChange={handleChange}
         />
       </label>

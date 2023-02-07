@@ -16,10 +16,10 @@ const User = ({ users }) => {
                 <span className="user__realData">{user.username} </span>
               </li>
               <li className="user__data">
-                Surname: <span className="user__realData">{user.surname}</span>
+                E-mail: <span className="user__realData">{user.email}</span>
               </li>
               <li className="user__data">
-                Age: <span className="user__realData">{user.age}</span>
+                Company: <span className="user__realData">{user.company.name}</span>
               </li>
             </ul>
           );
