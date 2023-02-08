@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import Registrator from "./pages/Registrator";
 import Contact from "./pages/Contact";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path='/' element={<Home/>}/>
+          <Route path='/registrator' element={<Registrator/>}/>
           <Route path='/contact' element={<Contact/>}/>
         </Routes>
       </Router>
