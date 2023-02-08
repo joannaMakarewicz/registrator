@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/registrator/static/css/main.6f8c5e23.css",
-    "main.js": "/registrator/static/js/main.8711b54a.js",
+    "main.js": "/registrator/static/js/main.a12aa76a.js",
     "index.html": "/registrator/index.html",
     "main.6f8c5e23.css.map": "/registrator/static/css/main.6f8c5e23.css.map",
-    "main.8711b54a.js.map": "/registrator/static/js/main.8711b54a.js.map"
+    "main.a12aa76a.js.map": "/registrator/static/js/main.a12aa76a.js.map"
   },
   "entrypoints": [
     "static/css/main.6f8c5e23.css",
-    "static/js/main.8711b54a.js"
+    "static/js/main.a12aa76a.js"
   ]
 }
