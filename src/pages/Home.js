@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import User from "../components/User";
 import Contact from "../components/Contact";
 
-const Registrator = () => {
+const Home = () => {
   const api = 'https://jsonplaceholder.typicode.com/users';
   const [users, setUsers]=useState([]);
   const[newUser, setNewUser]=useState('');
@@ -34,4 +34,4 @@ const Registrator = () => {
   );
 };
 
-export default Registrator;
+export default Home;
